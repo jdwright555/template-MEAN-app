@@ -1,5 +1,14 @@
 ##### THIS SCRIPT PRODUCES A BIRTHDAY PLANNER FROM YOUR LIST OF CONTACTS #####
 
+# loads libraries
+library(rmongodb)
+library(RCurl)
+library(plyr)
+library(dplyr)
+library(tidyr)
+library(RJSONIO)
+library(lubridate)
+
 # set up connection to mongo
 host<-"localhost" #This can be found using the getHostName() function in mongo
 username <- ""
