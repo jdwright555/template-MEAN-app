@@ -25,11 +25,6 @@ angular.module('appService', [])
 		return $http.delete('/api/contacts/' + id);
 	};
 
-	// run the R script
-	contactFactory.run = function() {
-		return $http.get('/api/script/');
-	};
-
 	// return our entire contactFactory object
 	return contactFactory;
 
