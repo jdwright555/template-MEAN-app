@@ -43,7 +43,7 @@ module.exports = function(app, express) {
 		// get all banks posted (accessed at GET http://localhost:8080/api/contacts)
 		.get(function(req, res) {
 
-			Contact.find({}, function(err, contacts) {
+			Contact.find(function(err, contacts) {
 				if (err) res.send(err);
 
 				// return the contacts
