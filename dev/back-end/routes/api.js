@@ -17,7 +17,7 @@ module.exports = function(app, express) {
 	// ----------------------------------------------------
 	apiRouter.route('/contacts')
 
-		// create a bank entry (accessed at POST http://localhost:8080/api/contacts)
+		// create a contact entry (accessed at POST http://localhost:8080/api/contacts)
 		.post(function(req, res) {
 
 			var contact = new Contact();		// create a new instance of the Contact model
@@ -40,10 +40,10 @@ module.exports = function(app, express) {
 
 		})
 
-		// get all banks posted (accessed at GET http://localhost:8080/api/contacts)
+		// get all contacts posted (accessed at GET http://localhost:8080/api/contacts)
 		.get(function(req, res) {
 
-			Contact.find(function(err, contacts) {
+			Contact.find({}, function(err, contacts) {
 				if (err) res.send(err);
 
 				// return the contacts
